@@ -31,6 +31,7 @@ const withWindow = (ComposedComponent) => class WindowDecorator extends Componen
     }
 
     this.state = state;
+    this.displayName = `withWindow(${ComposedComponent.displayName || ComposedComponent.name || 'Component'})`;
   }
 
   componentWillUnmount() {

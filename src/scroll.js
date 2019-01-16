@@ -27,6 +27,7 @@ const withScroll = ComposedComponent => class ScrollDecorator extends Component 
       // Alias for scrollPositionY for backwards compatibility
       scrollPosition: scrollPositionY,
     };
+    this.displayName = `withScroll(${ComposedComponent.displayName || ComposedComponent.name || 'Component'})`;
   }
 
   componentWillUnmount() {
